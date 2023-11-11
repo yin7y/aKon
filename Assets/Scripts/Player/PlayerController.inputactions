@@ -1,0 +1,96 @@
+{
+    "name": "PlayerController",
+    "maps": [
+        {
+            "name": "Player",
+            "id": "786c0036-d8b1-462b-adf2-2f1417722bc5",
+            "actions": [
+                {
+                    "name": "Move",
+                    "type": "Value",
+                    "id": "c491207d-4eed-407c-ae17-ddc7f649578b",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Attack",
+                    "type": "Button",
+                    "id": "192e876f-ba4c-4cd1-95a7-84fd02cda526",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Jump",
+                    "type": "Button",
+                    "id": "ef03c87d-d956-4e48-be6e-e7d5eab3f5e5",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "WASD",
+                    "id": "1592117e-9c4f-4e15-8d90-70dd619d0d93",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "left",
+                    "id": "5dd58ab5-d282-45af-ab0f-987ea8b94711",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "bab2bcaf-c24f-4d73-a746-6dba16aa726a",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "bb6c52d9-c05e-4a9b-8743-a98ea59b8b23",
+                    "path": "<Keyboard>/r",
+                    "interactions": "Hold",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Attack",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5fd46a6b-c41f-459b-811e-009142c4a99e",
+                    "path": "<Keyboard>/w",
+                    "interactions": "Hold",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
