@@ -24,6 +24,7 @@ public class PlayerController : MonoBehaviour
     
     void Start()
     {
+        DontDestroyOnLoad(this.gameObject);
         rb = this.gameObject.GetComponent<Rigidbody2D>();
         playerAnim = this.gameObject.GetComponent<Animator>();
         hp = max_hp;
@@ -42,6 +43,7 @@ public class PlayerController : MonoBehaviour
         if(playerAnim.GetCurrentAnimatorStateInfo(0).IsName("Attack") && playerAnim.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1.0f){
             playerAnim.SetBool("isAttack", false);
         }
+        
         currentHpScale = (float)hp / (float)max_hp;
         currentHpScale = currentHpScale <= 0 ? 0 : (float)hp / (float)max_hp;
         hp_bar.transform.localScale = new Vector3(currentHpScale, this.transform.localScale.y, this.transform.localScale.z);
@@ -70,6 +72,12 @@ public class PlayerController : MonoBehaviour
             hp -= 1;
         }        
     }
+    void OnTriggerEnter2D(Collider2D _coll) {
+        if(_coll.gameObject.tag == "Portal"){
+            _coll.gameObject.transform.GetComponent<Portal>().ChangeScene();
+        }        
+    }
+    
     
     void Flip(){
         Vector3 newScale = transform.localScale;

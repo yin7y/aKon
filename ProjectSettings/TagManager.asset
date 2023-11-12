@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - FireBall
+  - Portal
   layers:
   - Default
   - TransparentFX
@@ -54,4 +55,7 @@ TagManager:
     locked: 0
   - name: UI
     uniqueID: 3184328883
+    locked: 0
+  - name: Mask
+    uniqueID: 3185527695
     locked: 0
